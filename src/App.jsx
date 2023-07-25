@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 
-let currentUser = 'user2';
-const serverUrl = 'http://localhost:3000';
+let currentUser = import.meta.env.VITE_USER || "user1";
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 function App() {
   const [pluginData, setPluginData] = useState("");
